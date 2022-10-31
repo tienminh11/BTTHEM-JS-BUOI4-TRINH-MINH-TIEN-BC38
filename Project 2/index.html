@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        select{
+            padding: 5px 15px;
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+        button{
+            padding: 5px 20px;
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+    </style>
+  </head>
+  <body>
+    <h1>SƠ ĐỒ 3 KHỐI</h1>
+    <p>*INPUT: Thông tin gồm : Bố, mẹ, anh trai, em gái</p>
+    <p>*PROCESS:</p>
+    <ol>
+      <li>Lấy Input: Nhập thông tin có sẵn </li>
+      <li>
+        Công thức: <br>
+        if (name === father) {<br>
+            text = "Xin chào " + father + "!";<br>
+          } else if (name === mother) {<br>
+            text = "Xin chào " + mother + "!";<br>
+          } else if ((name === brother)) {<br>
+            text = "Xin chào " + brother + "!";<br>
+          } else {<br>
+            text = "Xin chào " + sister + "!";<br>
+          } <br>
+      </li>
+      <li>Chọn giá trị</li>
+      <li>In kết quả</li>
+    </ol>
+    <p>* OUTPUT: Xin chào + "giá trị được chọn"</p>
+    <hr>
+    <form>
+      <select name="dropdown" id="name">
+        <option value="Bố" id="Father">Bố</option>
+        <option value="Mẹ" id="Mother">Mẹ</option>
+        <option value="Anh Trai" id="Brother">Anh Trai</option>
+        <option value="Em Gái" id="Sister">Em Gái</option>
+      </select>
+    </form>
+    <button onclick="info()">Click</button>
+    <div id="check"></div>
+    <script src="./main.js"></script>
+  </body>
+</html>
