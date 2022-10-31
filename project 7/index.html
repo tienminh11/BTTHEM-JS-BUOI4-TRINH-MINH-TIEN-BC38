@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Sơ đồ 3 khối</h1>
+    <p>*INPUT: Cho 3 số nguyên</p>
+    <p>*PROCESS: </p>
+    <ol>
+        <li>Input: Nhập vào 3 số nguyên </li>
+        <li>Công thức: <br>
+            a = Math.floor(n / 100); <br>
+            b = Math.floor(n / 10) % 10;<br>
+            c = n % 10;<br>
+            switch (a) {<br>
+              case 1:<br>
+                a = "Một trăm ";<br>
+                break;<br>
+              case 2:<br>
+                a = "Hai trăm ";<br>
+                break;<br>
+              case 3:<br>
+                a = "Ba trăm ";<br>
+                break;<br>
+              case 4:<br>
+                a = "Bốn trăm ";<br>
+                break;<br>
+              case 5:<br>
+                a = "Năm trăm ";<br>
+                break;<br>
+              case 6:<br>
+                a = "Sáu trăm ";<br>
+                break;<br>
+              case 7:<br>
+                a = "Bảy trăm ";<br>
+                break;<br>
+              case 8:<br>
+                a = "Tám trăm ";<br>
+                break;<br>
+              case 9:<br>
+                a = "Chín trăm ";<br>
+                break;<br>
+            }<br>
+            if (b == 0 && a != 0) {<br>
+              b = "lẻ ";<br>
+            }<br>
+            switch (b) {<br>
+              case 1:<br>
+                b = "mười ";<br>
+                break;<br>
+              case 2:<br>
+                b = "hai mươi ";<br>
+                break;<br>
+              case 3:<br>
+                b = "ba mươi ";<br>
+                break;<br>
+              case 4:<br>
+                b = "bốn mươi ";<br>
+                break;<br>
+              case 5:<br>
+                b = "năm mươi ";<br>
+                break;<br>
+              case 6:<br>
+                b = "sáu mươi ";<br>
+                break;<br>
+              case 7:<br>
+                b = "bảy mươi ";<br>
+                break;<br>
+              case 8:<br>
+                b = "tám mươi ";<br>
+                break;<br>
+              case 9:<br>
+                b = "chín mươi ";<br>
+                break;<br>
+            }<br>
+            if (c == 0) {<br>
+              c = "";<br>
+            }<br>
+            switch (c) {<br>
+              case 1:<br>
+                c = "mốt";<br>
+                break;<br>
+              case 2:<br>
+                c = "hai ";<br>
+                break;<br>
+              case 3:<br>
+                c = "ba ";<br>
+                break;<br>
+              case 4:<br>
+                c = "bốn ";<br>
+                break;<br>
+              case 5:<br>
+                c = "năm ";<br>
+                break;<br>
+              case 6:<br>
+                c = "sáu ";<br>
+                break;<br>
+              case 7:<br>
+                c = "bảy ";<br>
+                break;<br>
+              case 8:<br>
+                c = "tám ";<br>
+                break;<br>
+              case 9:<br>
+                c = "chín ";<br>
+                break;<br>
+            }<br>
+            total = a + b + c;<br>
+        </li>
+        <li>In kết quả</li>
+    </ol>
+    <p>*OUTPUT: In ra cách đọc 3 số nguyên</p>
+    <hr>
+    <input type="number" placeholder="Nhập số nguyên" id="n">
+    <button onclick="number()">Kết Quả</button>
+    <div id="click">
+    </div>
+    <script src="./main.js"></script>
+</body>
+</html>

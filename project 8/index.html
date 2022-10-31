@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Sơ đồ 3 khối</h1>
+    <p>*INPUT: Cho tên, tọa độ nhà của 3 sinh viên và tọa độ của trường học</p>
+    <p>*PROCESS: </p>
+    <ol>
+        <li>Input: Nhập vào tên, tọa độ nhà của 3 sinh viên và tọa độ của trường học</li>
+        <li>Công thức: <br>
+          d1 = Math.sqrt((x - x1) * (x - x1) + (y - y1) * (y - y2));<br>
+          d2 = Math.sqrt((x - x2) * (x - x2) + (y - y2) * (y - y2));<br>
+          d3 = Math.sqrt((x - x3) * (x - x3) + (y - y3) * (y - y3));<br>
+          if (d1 > d2 && d1 > d3) {<br>
+            d = student1;<br>
+          } else if (d2 > d1 && d2 > d3) {<br>
+            d = student2;<br>
+          } else if (d3 > d1 && d3 > d2) {<br>
+            d = student3;<br>
+          }<br>
+        </li>
+        <li>In kết quả</li>
+    </ol>
+    <p>*OUTPUT: In ra tên sinh viên xa trường nhất </p>
+    <hr>
+    <div>
+      <p>Sinh viên 1</p>
+      <input type="text" placeholder="Nhập tên" id="student1"/>
+      <input type="number" placeholder="Nhập tọa độ x" id="x1"/>
+      <input type="number" placeholder="Nhập tọa độ y" id="y1"/>
+    </div>
+    <div>
+      <p>Sinh viên 2</p>
+      <input type="text" placeholder="Nhập tên" id="student2"/>
+      <input type="number" placeholder="Nhập tọa độ x" id="x2"/>
+      <input type="number" placeholder="Nhập tọa độ y" id="y2"/>
+    </div>
+    <div>
+      <p>Sinh viên 3</p>
+      <input type="text" placeholder="Nhập tên" id="student3"/>
+      <input type="number" placeholder="Nhập tọa độ x" id="x3"/>
+      <input type="number" placeholder="Nhập tọa độ y" id="y3"/>
+    </div>
+    <div>
+      <p>Trường học</p>
+      <input type="number" placeholder="Nhập tọa độ x" id="x"/>
+      <input type="number" placeholder="Nhập tọa độ y" id="y"/>
+    </div><br>
+    <button onclick="find()">Tìm</button>
+    <div id="click"></div>
+    <script src="./main.js"></script>
+  </body>
+</html>

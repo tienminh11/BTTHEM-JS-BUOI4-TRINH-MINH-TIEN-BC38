@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Sơ đồ 3 khối</h1>
+    <p>*INPUT: Cho ngày, tháng, năm</p>
+    <p>*PROCESS:</p>
+    <ol>
+      <li>Input: Nhập vào ngày, tháng, năm</li>
+      <li>
+        Công thức: <br />
+        *CÔNG THỨC TÍNH NGÀY TIẾP THEO <br />
+        switch (month) {<br />
+        case 4:<br />
+        case 6:<br />
+        case 9:<br />
+        case 11:<br />
+        time = 30;<br />
+        break;<br />
+        case 2:<br />
+        time = 28 + (year % 400 === 0);<br />
+        break;<br />
+        default:<br />
+        time = 31;<br />
+        }<br />
+        day = (day % time) + 1;<br />
+        if (day == 1 && month <= 12) {<br />
+        month = (month % 12) + 1;<br />
+        }<br />
+        if (month == 1 && day == 1) {<br />
+        year++;<br />
+        }<br />
+        tomorrow = day + "/" + month + "/" + year;<br />
+        }<br />
+        *CÔNG THỨC TÍNH NGÀY HÔM TRƯỚC<br />
+        function yesterday() {<br />
+        var day = document.getElementById("day").value * 1;<br />
+        var month = document.getElementById("month").value * 1;<br />
+        var year = document.getElementById("year").value * 1;<br />
+        var time;<br />
+        var yesterday = "";<br />
+        switch (month) {<br />
+        case 5:<br />
+        case 7:<br />
+        case 10:<br />
+        case 12:<br />
+        time = 30;<br />
+        break;<br />
+        case 3:<br />
+        if (year % 400 == 0) {<br />
+        time = 29;<br />
+        } else {<br />
+        time = 28;<br />
+        }<br />
+        break;<br />
+        default:<br />
+        time = 31;<br />
+        }<br />
+        if (day == 1 && month > 1) {<br />
+        day = time<br />
+        month--;<br />
+        } else if (month == 1 && day == 1) {<br />
+        day = time<br />
+        month = 12;<br />
+        year--;<br />
+        } else {<br />
+        day--;<br />
+        } <br />
+        yesterday = day + "/" + month + "/" + year;<br />
+      </li>
+      <li>In kết quả</li>
+    </ol>
+    <p>*OUTPUT: Ngày tiếp theo và ngày hôm trước</p>
+    <hr>
+    <input type="number" placeholder="ngày" id="day" />
+    <input type="number" placeholder="tháng" id="month" />
+    <input type="number" placeholder="năm" id="year" />
+    <div style="margin-top: 10px">
+      <button onclick="tomorrow()">Ngày tiếp theo</button>
+      <button onclick="yesterday()">Ngày hôm trước</button>
+    </div>
+    <div id="click"></div>
+    <script src="./main.js"></script>
+  </body>
+</html>

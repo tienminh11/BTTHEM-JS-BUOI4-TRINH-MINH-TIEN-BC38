@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Sơ đồ 3 khối</h1>
+    <p>*INPUT: Cho tháng, năm</p>
+    <p>*PROCESS: </p>
+    <ol>
+        <li>Input: Nhập vào tháng, năm</li>
+        <li>Công thức: <br>
+            switch (month) { <br>
+                case 4: <br>
+                case 6: <br>
+                case 9: <br>
+                case 11: <br>
+                  day = 30; <br>
+                  break; <br>
+                case 2: <br>
+                  if (year % 400 == 0 || (year % 4 == 0 && year % 100 != 0)) { <br>
+                    day = 29; <br>
+                  } else { <br>
+                    day = 28; <br>
+                  } <br>
+                  break; <br>
+                default: <br>
+                  day = 31; <br>
+              } <br>
+              if ((month == 6, 4, 9, 11 && month < 13)) { <br>
+                total = "Tháng " + month + " có " + day + " ngày"; <br>
+              } else if (month == 2 && month < 13) { <br>
+                total = "Tháng " + month + " có " + day + " ngày"; <br>
+              } else if ((month == 1, 3, 5, 6, 10, 12 && month < 13)) { <br>
+                total = "Tháng " + month + " có " + day + " ngày"; <br>
+              } else { <br>
+                total = "Tháng không hợp lệ"; <br>
+              } <br>
+        </li>
+        <li>In kết quả</li>
+    </ol>
+    <p>*OUTPUT: In ra số ngày trong tháng của tháng, năm đó</p>
+    <hr>
+    <input type="text" placeholder="Nhập tháng" id="month">
+    <input type="text" placeholder="Nhập năm" id="year">
+    <button onclick="day()">Kết Quả</button>
+    <div id="click"></div>
+    <script src="./main.js"></script>
+</body>
+</html>
